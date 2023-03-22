@@ -8,21 +8,11 @@ const SingleQuestion = ({title, info}) => {
     <article className="question">
       <header>
         <h5>{title}</h5>
-        {showInfo ? (
-          <button
-            className="question-btn"
-            onClick={() => setShowInfo(!showInfo)}
-          >
-            <AiOutlineMinus />
-          </button>
-        ) : (
-          <button
-            className="question-btn"
-            onClick={() => setShowInfo(!showInfo)}
-          >
-            <AiOutlinePlus />
-          </button>
-        )}
+        <button 
+          className='question-btn' 
+          onClick={()=> setShowInfo(!showInfo)}>
+            {showInfo ? <AiOutlineMinus/> : <AiOutlinePlus/>}
+        </button>
       </header>
       {showInfo && <p>{info}</p>}
     </article>
