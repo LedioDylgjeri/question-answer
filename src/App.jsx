@@ -7,7 +7,8 @@ const App = () => {
   const [isActive, setIsActive] = useState(null)
 
   const activeQuestion = (id) => {
-    setIsActive(id)
+    const newActiveQuestion = id === isActive ? null : id
+    setIsActive(newActiveQuestion)
   }
   
   return <main>
